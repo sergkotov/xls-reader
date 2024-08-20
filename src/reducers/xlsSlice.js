@@ -5,7 +5,7 @@ const initialState = {
     xlsError: false,
     xlsData: [],
     xlsColNames: []
-}
+};
 
 const xlsSlice = createSlice({
     name: 'xls',

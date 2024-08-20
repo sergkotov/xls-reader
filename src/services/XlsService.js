@@ -5,8 +5,8 @@ const _innAddToMapItem = (mapItem, item) => {
         num: [...mapItem.num, item[3]],
         price: [...mapItem.price, item[4]*item[3]],
         spend: 0
-    }
-}
+    };
+};
 
 const _innCreateMapItem = (item) => {
     return {
@@ -15,13 +15,14 @@ const _innCreateMapItem = (item) => {
         num: [item[3]],
         price: [item[4]*item[3]],
         spend: 0
-    }
-}
+    };
+};
 
 const _averageMapData = (mapItem) => {
     const totalNum = mapItem[1].num.reduce((acc, item) => acc + item, 0);
     const totalSum = +(mapItem[1].price.reduce((acc, item) => acc + item, 0).toFixed(2));
-    const totalPrice = +(totalSum / totalNum).toFixed(2)
+    const totalPrice = +(totalSum / totalNum).toFixed(2);
+
     return {
         inn: mapItem[0],
         name: mapItem[1].name,
@@ -29,10 +30,10 @@ const _averageMapData = (mapItem) => {
         num: totalNum,
         price: totalPrice,
         spend: totalSum
-    }
+    };
 }
 
-export const _totalByResultItems = (arr) => {
+const _totalByResultItems = (arr) => {
     const total = ["", "", "Итого:", 0, 0, 0];
     for(const item of arr) {
         total[3] += item.num;
@@ -40,8 +41,9 @@ export const _totalByResultItems = (arr) => {
     }
     total[4] = (total[5]/total[3]).toFixed(2);
     total[5] = total[5].toFixed(2);
+
     return total;
-}
+};
 
 export const mainSetData = (items) => {
     const newItems = [];
@@ -55,8 +57,9 @@ export const mainSetData = (items) => {
     });
     total[4] = (total[5]/total[3]).toFixed(2);
     total[5] = total[5].toFixed(2);
+
     return [newItems, total];
-}
+};
 
 export const innSetData = (items) => {
     const newItems = new Map();
@@ -75,4 +78,4 @@ export const innSetData = (items) => {
     }
 
     return [resultItems, _totalByResultItems(resultItems)];
-}
+};
