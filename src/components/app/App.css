@@ -1,0 +1,53 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Arial', sans-serif;
+	font-size: 18px;
+	color: #000;
+}
+
+div, p, a, span {
+	box-sizing: border-box;
+}
+
+.p404 {
+	text-align: center;
+}
+
+.p404 > a {
+	text-decoration: none;
+	color: #0703f4;
+}
+
+main {
+	text-align: center;
+}
+
+.view {
+    margin: 30px auto 0;
+    background-color: #f1f1f1;
+    padding: 20px;
+    max-width: 80%;
+    border-radius: 20px;
+}
+
+.form-import {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.form-import__input {
+	cursor: pointer;
+}
+
+.form-import__btn {
+	width: 180px;
+	height: 26px;
+	border: none;
+	border-radius: 20px;
+    background-color: #b9cec7;
+	cursor: pointer;
+}

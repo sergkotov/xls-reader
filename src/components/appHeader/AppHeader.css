@@ -1,0 +1,20 @@
+.app__menu {
+    margin: 30px auto;
+}
+
+.app__menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.app__menu li {
+    display: block;
+}
+
+.app__menu a {
+    text-decoration: none;
+}
